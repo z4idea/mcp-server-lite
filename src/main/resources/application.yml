@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: mcp-server
+  ai:
+    mcp:
+      server:
+        name: ${spring.application.name}
+        version: 1.0.0
+
+  main:
+    # 关闭显示启动标志
+    banner-mode: off
+    # 不会嵌入 web Tomcat
+    web-application-type: none
+
+logging:
+  pattern:
+    console:
+  file:
+    name: ${spring.application.name}.log
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
